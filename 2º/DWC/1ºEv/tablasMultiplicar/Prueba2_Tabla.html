@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tablas</title>
+  </head>
+  <script>
+    let numero1 = parseInt(prompt("Dame numero 1"));
+    let numero2 = parseInt(prompt("Dame numero 2"));
+    if (isNaN(numero1) && isNaN(numero2)) {
+      alert("ERROR: El valor aportado no es un numero");
+    } else {
+      let contador = 0;
+      let cols = 0;
+      let contenido = `<tr class="fila">`;
+
+      for (let n = numero1; n <= numero2; n++) {
+        if (cols % 2 == 0) {
+          contenido += `<tr class="fila">`;
+        } else {
+          contenido += `<td>`;
+        }
+        contenido += `<td class="columna"><h3>Tabla del ${n}</h3>`;
+
+        for (let m = 0; m <= 10; m++) {
+          let calculo = n * m;
+          contenido += `${n}x${m}=${calculo}<br>`;
+
+          cols++;
+        }
+      }
+      let tabla = `<table class="tabla">${contenido}</table>`;
+      document.write(tabla);
+    }
+  </script>
+
+  <body></body>
+</html>

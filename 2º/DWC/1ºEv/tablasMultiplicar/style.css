@@ -1,0 +1,17 @@
+.fila {
+    background: linear-gradient(to bottom, aquamarine, white)
+}
+
+.tabla {
+    border: 1px solid black;
+}
+
+.columna {
+    border: 2px solid black;
+    padding: 9px;
+    text-align: center;
+}
+
+.columna:hover {
+    background-color: white;
+}

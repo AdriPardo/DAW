@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tablas</title>
+  </head>
+  <style>
+    .primo {
+      background-color: red;
+      color: white;
+    }
+    .noPrimo {
+      background-color: blue;
+      color: white;
+    }
+  </style>
+  <script>
+    let numero1 = parseInt(prompt("Dame un numero "));
+
+    if (isNaN(numero1)) {
+      alert("ERROR: El valor aportado no es un numero");
+    } else {
+      let contenido = "";
+      for (let n = 1; n <= numero1; n++) {
+        let contador = 0;
+        if (
+          (n % 2 == 0 || n % 3 == 0 || n % 5 == 0) && (n != 2 && n != 3 && n != 5)
+        ) {
+          contenido += `<tr><td class="noPrimo">${n} NO es primo</td></tr>`;
+          contador++;
+        } else {
+          contenido += `<tr><td class="primo">${n} SI es primo</td></tr>`;
+          contador++;
+        }
+      }
+      let tabla = `<table class="tabla" border="1">${contenido}</table>`;
+      document.write(tabla);
+    }
+  </script>
+
+  <body></body>
+</html>

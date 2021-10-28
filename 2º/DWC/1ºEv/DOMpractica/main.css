@@ -1,0 +1,14 @@
+.l-catalogo {
+display:inline-table;
+}
+
+.l-carrito {
+  display: inline-table;
+}
+
+.c-panel__imagen {
+  width: 250px;
+  height: 200px;
+}
+
+/*# sourceMappingURL=main.css.map */

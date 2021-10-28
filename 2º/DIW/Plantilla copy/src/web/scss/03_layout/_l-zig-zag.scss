@@ -1,0 +1,19 @@
+.l-zig-zag {
+    display: grid;
+    grid-template-areas:
+     "arriba-izquierdo arriba-derecho"
+     "medio-izquierdo medio-derecho"
+     "abajo-izquierdo abajo-derecho"
+    ;
+    gap: 10px;
+
+    &__arriba-izquierdo{
+        grid-area: arriba-izquierdo;
+    }
+    &__medio-derecho{
+        grid-area: medio-derecho;
+    }
+    &__abajo-izquierdo{
+        grid-area: abajo-izquierdo;
+    }
+}
