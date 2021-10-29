@@ -1,7 +1,29 @@
-
-
 @each $name, $value in $padding {
     .g--padding-#{$name} {
+      padding: $value;
+    }
+
+    .g--padding-top-#{$name} {
+      padding: $value;
+    }
+
+    .g--padding-bottom-#{$name} {
+      padding: $value;
+    }
+
+    .g--padding-right#{$name} {
+      padding: $value;
+    }
+
+    .g--padding-left-#{$name} {
+      padding: $value;
+    }
+
+    .g--padding-horizontal-#{$name} {
+      padding: $value;
+    }
+
+    .g--padding-vertical-#{$name} {
       padding: $value;
     }
 }
