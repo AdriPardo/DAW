@@ -4,26 +4,28 @@
     }
 
     .g--padding-top-#{$name} {
-      padding: $value;
+      padding-top: $value;
     }
 
     .g--padding-bottom-#{$name} {
-      padding: $value;
+      padding-bottom: $value;
     }
 
     .g--padding-right#{$name} {
-      padding: $value;
+      padding-right: $value;
     }
 
     .g--padding-left-#{$name} {
-      padding: $value;
+      padding-left: $value;
     }
 
     .g--padding-horizontal-#{$name} {
-      padding: $value;
+      padding-left: $value;
+      padding-right: $value;
     }
 
     .g--padding-vertical-#{$name} {
-      padding: $value;
+      padding-bottom: $value;
+      padding-top: $value;
     }
 }

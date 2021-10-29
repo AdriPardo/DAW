@@ -6,25 +6,27 @@
     }
 
     .g--margin-top-#{$name} {
-      margin: $value;
+      margin-top: $value;
     }
 
     .g--margin-bottom-#{$name} {
-      margin: $value;
+      margin-bottom: $value;
     }
 
-    .g--margin-#{$name} {
-      margin: $value;
+    .g--margin-right-#{$name} {
+      margin-right: $value;
     }
 
-    .g--margin-#{$name} {
-      margin: $value;
+    .g--margin-left-#{$name} {
+      margin-left: $value;
     }
 
-    .g--margin-#{$name} {
-      margin: $value;
+    .g--margin-horizontal-#{$name} {
+      margin-left: $value;
+      margin-right: $value;
     }
-    .g--margin-#{$name} {
-      margin: $value;
+    .g--margin-vertical-#{$name} {
+      margin-bottom: $value;
+      margin-top: $value;
     }
 }
