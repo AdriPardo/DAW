@@ -1,0 +1,8 @@
+
+
+
+@each $name, $value in $border-radius {
+    .g--border-radius-#{$name} {
+      border-radius: $value;
+    }
+}

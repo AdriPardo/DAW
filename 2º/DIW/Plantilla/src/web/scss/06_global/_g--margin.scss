@@ -1,0 +1,7 @@
+
+
+@each $name, $value in $margin {
+    .g--margin-#{$name} {
+      margin: $value;
+    }
+}

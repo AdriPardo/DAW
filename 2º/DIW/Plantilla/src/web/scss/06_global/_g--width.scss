@@ -1,0 +1,7 @@
+
+
+@each $name, $value in $widths {
+    .g--width-#{$name} {
+      width: $value;
+    }
+  }

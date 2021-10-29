@@ -1,0 +1,20 @@
+.l-dolmen {
+    display: grid;
+    
+    &--tumbado-izquierda{
+        grid-template-areas: 
+        "cabeza arriba"
+        "cabeza abajo";
+        float: left;
+    }
+    &__cabeza{
+        grid-area: cabeza;
+    }
+    &__pata-izquierda {
+        grid-area: arriba;
+    }
+    &__pata-derecha{
+        grid-area: abajo;
+    }
+    
+}
