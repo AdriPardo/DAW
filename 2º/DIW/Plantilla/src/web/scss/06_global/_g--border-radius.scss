@@ -1,8 +1,5 @@
-
-
-
-@each $name, $value in $border-radius {
-    .g--border-radius-#{$name} {
-      border-radius: $value;
+@each $key in getBorderRadiusKeys() {
+    .g--border-radius-#{$key} {
+      border-radius: getBorderRadius($key);
     }
 }

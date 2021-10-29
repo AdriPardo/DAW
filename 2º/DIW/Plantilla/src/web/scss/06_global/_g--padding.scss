@@ -1,31 +1,31 @@
-@each $name, $value in $padding {
-    .g--padding-#{$name} {
-      padding: $value;
+@each $key in getPaddingKeys() {
+    .g--padding-#{$key} {
+      padding: getPadding($key);
     }
 
-    .g--padding-top-#{$name} {
-      padding-top: $value;
+    .g--padding-top-#{$key} {
+      padding-top: getPadding($key);
     }
 
-    .g--padding-bottom-#{$name} {
-      padding-bottom: $value;
+    .g--padding-bottom-#{$key} {
+      padding-bottom: getPadding($key);
     }
 
-    .g--padding-right#{$name} {
-      padding-right: $value;
+    .g--padding-right#{$key} {
+      padding-right: getPadding($key);
     }
 
-    .g--padding-left-#{$name} {
-      padding-left: $value;
+    .g--padding-left-#{$key} {
+      padding-left: getPadding($key);
     }
 
-    .g--padding-horizontal-#{$name} {
-      padding-left: $value;
-      padding-right: $value;
+    .g--padding-horizontal-#{$key} {
+      padding-left: getPadding($key);
+      padding-right: getPadding($key);
     }
 
-    .g--padding-vertical-#{$name} {
-      padding-bottom: $value;
-      padding-top: $value;
+    .g--padding-vertical-#{$key} {
+      padding-bottom: getPadding($key);
+      padding-top: getPadding($key);
     }
 }

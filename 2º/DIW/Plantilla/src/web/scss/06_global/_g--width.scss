@@ -1,7 +1,5 @@
-
-
-@each $name, $value in $widths {
-    .g--width-#{$name} {
-      width: $value;
+@each $key in getWidthsKeys() {
+    .g--width-#{$key} {
+      width: getWidth($key);
     }
   }

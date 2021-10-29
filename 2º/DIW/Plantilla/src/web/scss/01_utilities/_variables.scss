@@ -1,69 +1,52 @@
 $border-radius: (
-    "2xs": 0px,
-    "xs": 2px,
-    "s": 4px,
-    "m": 6px,
-    "l": 8px,
-    "xl": 16px,
-    "2xl": 32px
+    "0": 0px,
+    "1": 2px,
+    "2": 4px,
+    "3": 6px,
+    "4": 8px,
+    "5": 16px,
+    "6": 32px
 );
 
-$font-size: (
-    "3xs": 12px,
-    "2xs": 14px,
-    "xs": 16px,
-    "s": 18px,
-    "m": 20px,
-    "l": 24px,
-    "xl": 30px,
-    "2xl": 36px,
-    "3xl": 48px
-);
-
-$heights: (
-    "3xs": 4px,
-    "2xs": 8px,
+$font-sizes: (
+    "3xs": 8px,
+    "2xs": 10px,
     "xs": 12px,
-    "s": 16px,
-    "m": 20px,
-    "l": 24px,
-    "xl": 32px,
-    "2xl": 40px,
-    "3xl": 60px
+    "s": 14px,
+    "m": 16px,
+    "l": 18px,
+    "xl": 20px,
+    "2xl": 22px,
+    "3xl": 24px
 );
 
-$margin: (
-    "3xs": 0px,
-    "2xs": 4px,
-    "xs": 8px,
-    "s": 12px,
-    "m": 16px,
-    "l": 20px,
-    "xl": 24px,
-    "2xl": 32px,
-    "3xl": 40px
+
+
+$margins: (
+    "0": 0px,
+    "1": 4px,
+    "2": 8px,
+    "3": 12px,
+    "4": 16px,
+    "5": 20px,
+    "6": 24px,
+    "7": 32px,
+    "8": 40px
 );
 
-$padding: (
-    "3xs": 0px,
-    "2xs": 4px,
-    "xs": 8px,
-    "s": 12px,
-    "m": 16px,
-    "l": 20px,
-    "xl": 24px,
-    "2xl": 32px,
-    "3xl": 40px
+$paddings:map-merge(
+$margins,("auto":"auto")
 );
 
 $widths: (
-    "3xs": 4px,
-    "2xs": 8px,
-    "xs": 12px,
-    "s": 16px,
-    "m": 20px,
-    "l": 24px,
-    "xl": 32px,
-    "2xl": 40px,
-    "3xl": 60px
+    "0":0px,    
+    "1": 4px,
+    "2": 8px,
+    "3": 12px,
+    "4": 16px,
+    "5": 20px,
+    "6": 24px,
+    "7": 32px,
+    "8": 40px,
+    "9": 60px
 );

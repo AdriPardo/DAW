@@ -1,7 +1,5 @@
-
-
-@each $name, $value in $font-size {
-    .g--font-size-#{$name} {
-      font-size: $value;
+@each $key in getFontSizeKeys() {
+    .g--font-size-#{$key} {
+      font-size: getFontSize($key);
     }
 }
