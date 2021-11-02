@@ -9,6 +9,7 @@ $dispatcher = FastRoute\simpleDispatcher(function (FastRoute\RouteCollector $r) 
     $r->addRoute('POST', $basedir . '/peliculas/{id:\d+}/criticas', 'Critica@insert');
     $r->addRoute('GET', $basedir . '/peliculas/{id_pelicula:\d+}/criticas/editar/{id_critica:\d+}', 'Critica@editForm');
     $r->addRoute('PUT', $basedir . '/peliculas/{id_pelicula:\d+}/criticas/{id_critica:\d+}', 'Critica@edit');
+    $r->addRoute('DELETE', $basedir . '/peliculas/{id_pelicula:\d+}/criticas/{id_critica:\d+}', 'Critica@delete');
     $r->addRoute('GET', $basedir . '/peliculas', 'Pelicula@getAll');
     $r->addRoute('GET', $basedir . '/peliculas/{id:\d+}', 'Pelicula@getById');
     $r->addRoute('GET', $basedir . '/actores', 'Actor@getAll');

@@ -60,6 +60,11 @@ class Model
         $result = db\DB::edit($this->table, $_POST, $this->primary_key, $pk);
         return $result;
     }
+    protected function delete($pk)
+    {
+        $result = db\DB::delete($this->table, $_POST, $this->primary_key, $pk);
+        return $result;
+    }
 
 
     public static function __callStatic($name, $arguments)

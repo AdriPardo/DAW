@@ -66,6 +66,23 @@ class DB
         return $this->execute($sql, $params);
     }
 
+    private function delete($table, $editValues, $pkName, $pkValue)
+    {
+        $fields = '';
+        $params = array();
+        foreach ($editValues as $key => $value) {
+            if ($key !== '_method') {
+                $fields .= "$key = :$key,";
+                $param = ':' . $key;
+                $params[$param] = $value;
+            }
+        }
+        $fields = \substr($fields, 0, -1);
+        $where = "$pkName = :id";
+        $params[":id"] = $pkValue;
+        $sql = "DELETE $fields FROM $table WHERE $where";
+        return $this->execute($sql, $params);
+    }
 
     public static function __callStatic($name, $arguments)
     {

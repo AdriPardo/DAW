@@ -50,4 +50,11 @@ class Critica extends Controller
         header('Location: ' . $_ENV['APP_URL'] . '/peliculas/' .
             $vars['id_pelicula'] . '/criticas');
     }
+
+    public function delete($vars)
+    {
+        modelCritica::delete($vars['id_critica']);
+        header('Location: ' . $_ENV['APP_URL'] . '/peliculas/' .
+            $vars['id_pelicula'] . '/criticas');
+    }
 }
