@@ -1,5 +1,0 @@
-@each $key in getWidthsKeys() {
-    .g--width-#{$key} {
-      width: getWidth($key);
-    }
-  }
