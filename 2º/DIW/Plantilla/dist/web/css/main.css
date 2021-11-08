@@ -468,16 +468,40 @@ table {
 
 .l-columns {
   display: grid;
-  grid-template-areas: "columna-izquierda columna-derecha";
+  grid-template-areas: repeat(1, 1fr);
 }
 .l-columns--2 {
-  grid-area: columna-derecha;
-  grid-gap: 100px;
+  grid-template-columns: repeat(2, 1fr);
 }
 .l-columns--3 {
-  grid-template-areas: "columna-izquierda columna-centro columna-derecha";
-  grid-area: columna-centro;
-  grid-gap: 12px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.l-columns--4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+.l-columns--5 {
+  grid-template-columns: repeat(5, 1fr);
+}
+.l-columns--6 {
+  grid-template-columns: repeat(6, 1fr);
+}
+.l-columns--7 {
+  grid-template-columns: repeat(7, 1fr);
+}
+.l-columns--8 {
+  grid-template-columns: repeat(8, 1fr);
+}
+.l-columns--9 {
+  grid-template-columns: repeat(9, 1fr);
+}
+.l-columns--10 {
+  grid-template-columns: repeat(10, 1fr);
+}
+.l-columns--11 {
+  grid-template-columns: repeat(11, 1fr);
+}
+.l-columns--12 {
+  grid-template-columns: repeat(12, 1fr);
 }
 
 .c-button {
