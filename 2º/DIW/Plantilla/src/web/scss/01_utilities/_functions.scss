@@ -39,6 +39,3 @@
   @return map-get($widths,""+$key);
 }
 
-@function getColumns() {
-  @return $columns + 1;
-}
