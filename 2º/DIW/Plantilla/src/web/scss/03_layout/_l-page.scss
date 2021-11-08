@@ -1,17 +1,16 @@
 .l-page{
+    &--body {
     display: grid;
-    grid-template-areas: "head""body""footer";
-    font-family: Arial, Helvetica, sans-serif;
-    &__head{
-        display: grid;
-        grid-area: head;
+    height: 100vh;
+    grid-template-rows: auto 1fr auto;
     }
-    &__body{
-        display: grid;
-        grid-area: body;
+
+    &--header {
+    padding: 2rem;
     }
-    &__footer{
-        display: grid;
-        grid-area: footer;
+
+    &--footer {
+    padding: 2rem;
+    text-align: center;
     }
 }

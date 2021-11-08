@@ -1,6 +1,6 @@
 @import
 './01_utilities/_functions.scss',
-'./01_utilities/_mixins.scss',
+'./01_utilities/_mixings.scss',
 './01_utilities/_variables.scss';
 
 @import
@@ -8,7 +8,6 @@
 './02_base/_reset.scss';
 
 @import
-'./03_layout/_l-2-columnas.scss',
 './03_layout/_l-page.scss',
 './03_layout/_l-zig-zag.scss',
 './03_layout/l-dolmen.scss',
