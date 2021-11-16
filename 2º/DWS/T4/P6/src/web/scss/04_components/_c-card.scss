@@ -1,0 +1,16 @@
+.c-card{
+    border-radius:15px;
+    height: 454px;
+    width: 313px;
+    margin-bottom: 2px;
+    &__image{
+        max-width: 33%;
+        max-height: 33%;
+    }
+    &__body{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+}
