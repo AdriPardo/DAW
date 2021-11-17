@@ -1,0 +1,9 @@
+.l-columns{
+    display: grid;
+    grid-template-areas: repeat(1, 1fr);
+    @for $i from 1 to $max-columns {
+    &--#{$i+1} {   
+      grid-template-columns: repeat($i+1, 1fr); 
+         }
+    }
+}
