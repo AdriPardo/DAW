@@ -37,28 +37,22 @@ let getCategorias = () => {
 
 function pintarArticulos(boton) {
     id = boton.id;
+    panel = document.getElementById('panelArticulos');
+    panel.innerHTML = '';
     getArticulosCategoria(id).then(result => result.forEach(a => {
-        panel = document.getElementById('panelArticulos');
-        if (panel.contains(document.getElementById('div'))) {
-            panel.removeChild(document.getElementById('div'));
-        } else {
-            articulo = document.createElement('div');
-            articulo.id = "div";
-            nombre = document.createElement('h3');
-            texto = document.createTextNode(a.nombre)
-            nombre.appendChild(texto);
-            articulo.appendChild(nombre);
-            precio = document.createElement('p');
-            texto = document.createTextNode(a.precio + "€")
-            precio.appendChild(texto);
-            articulo.appendChild(precio);
-            panel.appendChild(articulo);
-        }
-
+        articulo = document.createElement('span');
+        articulo.id = a.id;
+        articulo.className = "c-articulo";
+        nombre = document.createElement('h3');
+        texto = document.createTextNode(a.nombre)
+        nombre.appendChild(texto);
+        articulo.appendChild(nombre);
+        precio = document.createElement('p');
+        texto = document.createTextNode(a.precio + "€")
+        precio.appendChild(texto);
+        articulo.appendChild(precio);
+        panel.appendChild(articulo);
     }));
-
-
-
 }
 
 

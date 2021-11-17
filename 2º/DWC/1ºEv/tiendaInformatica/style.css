@@ -1,0 +1,8 @@
+.l-page{
+    display: flex;
+    flex-direction: row;
+}
+
+.c-articulo{
+    margin: 20px;
+}
