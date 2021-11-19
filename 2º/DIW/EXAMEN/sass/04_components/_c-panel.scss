@@ -1,0 +1,27 @@
+.c-panel{
+    display: grid;
+    height: 100%;
+    min-height: 369px;
+    justify-items: center;
+    text-align: center;
+    grid-template-rows: auto auto 1fr auto;
+    background-color: white;
+    border: 1px solid black;
+
+    &__titulo {
+        font-weight: bold;
+        color: black;
+        
+    }
+    &__precio{
+        color: black ;
+    }
+    &__texto {
+        color:black;
+        
+    }
+    
+    &--sombreado{
+        @include box-shadow(black);
+    }
+}

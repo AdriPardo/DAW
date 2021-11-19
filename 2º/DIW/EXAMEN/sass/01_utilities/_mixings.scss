@@ -3,3 +3,8 @@
   -moz-box-shadow: 2px 10px 24px $color;
   box-shadow: 2px 10px 24px $color;
 }
+
+@mixin colorBotones ($backgroundColor, $color) {
+  background-color: $backgroundColor;
+  color: $color;
+}

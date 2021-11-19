@@ -6,14 +6,6 @@
   @return map-get($paddings,""+$key);
 }
 
-@function getMarginKeys() {
-  @return map-keys($margins);
-}
-
-@function getMargin($key) {
-  @return map-get($margins,""+$key);
-}
-
 @function getBorderRadiusKeys() {
   @return map-keys($border-radius);
 }
@@ -30,12 +22,11 @@
   @return map-get($font-sizes,""+$key);
 }
 
-
-@function getWidthsKeys() {
-  @return map-keys($widths);
+@function getTextoKeys() {
+    @return map-keys($texto);
 }
 
-@function getWidth($key) {
-  @return map-get($widths,""+$key);
+@function getTipoTexto($key) {
+    @return map-get($texto,""+$key);
 }
 

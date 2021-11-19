@@ -2,33 +2,17 @@
     padding: getPadding("3");
     display: inline-block;
     cursor: pointer;
+    font-weight: bold;
     border-radius: getBorderRadius("2");
-    border: 1px solid #c2bcbc;
-    background-color: #ffffff;
-    color: black;
-    text-decoration: none;
-
+    @include colorBotones(black, white);
+    
     &--secundario{
-        background-color: white;
-        color: #0056b8;
+        font-weight: normal;
+        border: solid 1px black;
+        @include colorBotones(white, black);
     }
 
-    &--terciario{
-        background-color: white;
-        color: #0056b8;
-        border: none;
-        text-decoration: black;
-    }
-
-    &--alternativo{
-        background-color: #ed8936;
-        border-color: #ed8936;
-        color: white;
-    }
-
-    &--peligroso{
-        background-color: #c53030;
-        border-color: #c53030;
-        color: white;
+    &--sombreado{
+        @include box-shadow(black);
     }
 }
