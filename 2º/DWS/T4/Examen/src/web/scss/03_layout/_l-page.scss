@@ -1,0 +1,17 @@
+.l-page{
+    display: grid;
+    grid-template-areas: "head""body""footer";
+    font-family: Arial, Helvetica, sans-serif;
+    &__head{
+        display: grid;
+        grid-area: head;
+    }
+    &__body{
+        display: grid;
+        grid-area: body;
+    }
+    &__footer{
+        display: grid;
+        grid-area: footer;
+    }
+}
