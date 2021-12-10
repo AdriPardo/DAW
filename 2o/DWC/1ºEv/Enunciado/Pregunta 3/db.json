@@ -1,0 +1,39 @@
+{
+  "articulos": [
+    {
+      "id": 1,
+      "nombre": "DVD",
+      "categoria": 1
+	  },
+	  {
+      "id": 2,
+      "nombre": "Raton Optico",
+      "categoria": 1
+	  },
+	  {
+      "id": 3,
+      "nombre": "Portatil Lenovo",
+      "categoria": 2
+	  },
+	  {
+      "id": 4,
+      "nombre": "Sobremesa HP",
+      "categoria": 2
+	  },
+      {
+	  "id": 5,
+      "nombre": "Procesador Intel i7",
+      "categoria": 3
+	  }
+  ],
+  "categorias": [
+    {
+      "id": 1,
+      "nombre": "Perifericos"
+    },
+	{
+      "id": 2,
+      "nombre": "Ordenadores"
+    }
+  ]
+}

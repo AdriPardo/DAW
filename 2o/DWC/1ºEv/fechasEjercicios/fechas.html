@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    let fecha = new Date();
+    let dias =
+      [
+        "Domingo",
+        "Lunes",
+        "Martes",
+        "Miercoles",
+        "Jueves",
+        "Viernes",
+        "Sabado"
+      ];
+    let diaSemanaActual = dias[fecha.getDay()];
+    let meses =
+      [
+        "Enero",
+        "Febrero",
+        "Marzo",
+        "Abril",
+        "Mayo",
+        "Junio",
+        "Julio",
+        "Agosto",
+        "Septiembre",
+        "Occtubre",
+        "Noviembre",
+        "Diciembre"
+      ];
+let mesActual = meses[fecha.getMonth()]
+    let frase = `Hoy es ${diaSemanaActual} ${fecha.getDate()} de ${mesActual} de ${fecha.getFullYear()}`;
+    document.write(frase);
+  </script>
+  <body></body>
+</html>

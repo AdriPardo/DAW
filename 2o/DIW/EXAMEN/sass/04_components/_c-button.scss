@@ -1,0 +1,18 @@
+.c-button{
+    padding: getPadding("3");
+    display: inline-block;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: getBorderRadius("2");
+    @include colorBotones(black, white);
+    
+    &--secundario{
+        font-weight: normal;
+        border: solid 1px black;
+        @include colorBotones(white, black);
+    }
+
+    &--sombreado{
+        @include box-shadow(black);
+    }
+}

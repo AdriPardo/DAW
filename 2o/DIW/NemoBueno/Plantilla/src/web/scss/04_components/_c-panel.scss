@@ -1,0 +1,18 @@
+.c-panel {
+
+    &__titulo {
+        background-color: #0056b8;
+        color: #FFFFFF;
+        border-radius: 4px;
+
+        &--secundario {
+            background-color: #FFFFFF;
+            color: #0056b8;
+        }
+    }
+    
+    &__texto {
+        background-color: #FFFFFF;
+        color: #0056b8;
+    }
+}

@@ -1,0 +1,47 @@
+
+<table border=1>
+
+<tr>
+	<td> <img id=grande src=blanco.jpg width=400 height=400>
+	<td>
+		<img src=bravas.jfif width=100 height=100> Bravas 4<input type="checkbox" value="4" id="a1"/> <br>
+		<img src=calamares.jfif width=100 height=100> Calamares 9<input type="checkbox" value="9" id="a1"/><br>
+		<img src=olivas.jfif width=100 height=100> Olivas 3<input type="checkbox" value="3" id="a1"/>
+
+</table>
+
+<button id=total> Total </button>
+<h1 id="precio">Total :0</h1>
+
+
+
+<script>
+window.onload=function(){
+	fotos=document.getElementsByTagName("img");
+	Array.from(fotos).forEach(f=>{ f.addEventListener("mouseover",verFoto)
+								   f.addEventListener("mouseout",quitaFoto)
+								 });
+	
+	document.getElementById("total").addEventListener("click", total)
+}
+
+function verFoto(){
+	document.getElementById("grande").src=this.src
+}
+
+function quitaFoto(event){
+	document.getElementById("grande").src="blanco.jpg"
+}
+
+function total(){
+	inputs=document.getElementsByTagName("input");
+	total=0;
+	Array.from(inputs).forEach(i=>{if(i.type=="checkbox" && i.checked)
+										total+=+i.value 
+								   });
+	console.log(total);
+	document.getElementById("precio").innerHTML="Total :"+total	
+										
+}
+
+</script>

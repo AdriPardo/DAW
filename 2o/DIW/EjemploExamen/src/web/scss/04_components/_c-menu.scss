@@ -1,0 +1,11 @@
+.c-menu{
+display: flex;
+flex-direction: row;
+&--izquierda{
+    margin-right: auto;
+}
+&--derecha{
+    margin-left: auto;
+}
+
+}
