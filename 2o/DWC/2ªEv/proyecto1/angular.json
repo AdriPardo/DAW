@@ -6,7 +6,7 @@
     "version": 1,
     "newProjectRoot": "projects",
     "projects": {
-        "Prueba1": {
+        "proyecto1": {
             "projectType": "application",
             "schematics": {
                 "@schematics/angular:application": {
@@ -20,7 +20,7 @@
                 "build": {
                     "builder": "@angular-devkit/build-angular:browser",
                     "options": {
-                        "outputPath": "dist/Prueba1",
+                        "outputPath": "dist/proyecto1",
                         "index": "src/index.html",
                         "main": "src/main.ts",
                         "polyfills": "src/polyfills.ts",
@@ -30,7 +30,7 @@
                             "src/assets"
                         ],
                         "styles": [
-                            "C:/Users/adrip/Desktop/DAW/2º/DWC/2ªEv/Prueba1/node_modules/bootstrap/dist/css/bootstrap.min.css",
+                            "node_modules/bootstrap/dist/css/bootstrap.min.css",
                             "src/styles.css"
                         ],
                         "scripts": []
@@ -69,10 +69,10 @@
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "configurations": {
                         "production": {
-                            "browserTarget": "Prueba1:build:production"
+                            "browserTarget": "proyecto1:build:production"
                         },
                         "development": {
-                            "browserTarget": "Prueba1:build:development"
+                            "browserTarget": "proyecto1:build:development"
                         }
                     },
                     "defaultConfiguration": "development"
@@ -80,7 +80,7 @@
                 "extract-i18n": {
                     "builder": "@angular-devkit/build-angular:extract-i18n",
                     "options": {
-                        "browserTarget": "Prueba1:build"
+                        "browserTarget": "proyecto1:build"
                     }
                 },
                 "test": {
@@ -103,5 +103,5 @@
             }
         }
     },
-    "defaultProject": "Prueba1"
+    "defaultProject": "proyecto1"
 }
