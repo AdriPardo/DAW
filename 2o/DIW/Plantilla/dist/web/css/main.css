@@ -391,34 +391,17 @@ table {
   border-spacing: 0;
 }
 
-.l-2-columnas {
+.l-page--body {
   display: grid;
-  grid-template-areas: "lateral-izquierdo lateral-derecho";
-  gap: 10px;
+  height: 100vh;
+  grid-template-rows: auto 1fr auto;
 }
-.l-2-columnas__lateral-izquierdo {
-  grid-area: lateral-izquierdo;
+.l-page--header {
+  padding: 2rem;
 }
-.l-2-columnas__lateral-derecho {
-  grid-area: lateral-derecho;
-}
-
-.l-page {
-  display: grid;
-  grid-template-areas: "head" "body" "footer";
-  font-family: Arial, Helvetica, sans-serif;
-}
-.l-page__head {
-  display: grid;
-  grid-area: head;
-}
-.l-page__body {
-  display: grid;
-  grid-area: body;
-}
-.l-page__footer {
-  display: grid;
-  grid-area: footer;
+.l-page--footer {
+  padding: 2rem;
+  text-align: center;
 }
 
 .l-zig-zag {
@@ -684,6 +667,117 @@ table {
   font-size: 24px;
 }
 
+@media (min-width: 576px) {
+  .g--font-size-3xs\@movil {
+    font-size: 8px;
+  }
+
+  .g--font-size-2xs\@movil {
+    font-size: 10px;
+  }
+
+  .g--font-size-xs\@movil {
+    font-size: 12px;
+  }
+
+  .g--font-size-s\@movil {
+    font-size: 14px;
+  }
+
+  .g--font-size-m\@movil {
+    font-size: 16px;
+  }
+
+  .g--font-size-l\@movil {
+    font-size: 18px;
+  }
+
+  .g--font-size-xl\@movil {
+    font-size: 20px;
+  }
+
+  .g--font-size-2xl\@movil {
+    font-size: 22px;
+  }
+
+  .g--font-size-3xl\@movil {
+    font-size: 24px;
+  }
+}
+@media (min-width: 768px) {
+  .g--font-size-3xs\@tablet {
+    font-size: 8px;
+  }
+
+  .g--font-size-2xs\@tablet {
+    font-size: 10px;
+  }
+
+  .g--font-size-xs\@tablet {
+    font-size: 12px;
+  }
+
+  .g--font-size-s\@tablet {
+    font-size: 14px;
+  }
+
+  .g--font-size-m\@tablet {
+    font-size: 16px;
+  }
+
+  .g--font-size-l\@tablet {
+    font-size: 18px;
+  }
+
+  .g--font-size-xl\@tablet {
+    font-size: 20px;
+  }
+
+  .g--font-size-2xl\@tablet {
+    font-size: 22px;
+  }
+
+  .g--font-size-3xl\@tablet {
+    font-size: 24px;
+  }
+}
+@media (min-width: 992px) {
+  .g--font-size-3xs\@desktop {
+    font-size: 8px;
+  }
+
+  .g--font-size-2xs\@desktop {
+    font-size: 10px;
+  }
+
+  .g--font-size-xs\@desktop {
+    font-size: 12px;
+  }
+
+  .g--font-size-s\@desktop {
+    font-size: 14px;
+  }
+
+  .g--font-size-m\@desktop {
+    font-size: 16px;
+  }
+
+  .g--font-size-l\@desktop {
+    font-size: 18px;
+  }
+
+  .g--font-size-xl\@desktop {
+    font-size: 20px;
+  }
+
+  .g--font-size-2xl\@desktop {
+    font-size: 22px;
+  }
+
+  .g--font-size-3xl\@desktop {
+    font-size: 24px;
+  }
+}
 .g--margin-0 {
   margin: 0px;
 }
@@ -1292,6 +1386,130 @@ table {
 
 .g--width-9 {
   width: 60px;
+}
+
+@media (min-width: 576px) {
+  .g--width-0\@movil {
+    width: 0px;
+  }
+
+  .g--width-1\@movil {
+    width: 4px;
+  }
+
+  .g--width-2\@movil {
+    width: 8px;
+  }
+
+  .g--width-3\@movil {
+    width: 12px;
+  }
+
+  .g--width-4\@movil {
+    width: 16px;
+  }
+
+  .g--width-5\@movil {
+    width: 20px;
+  }
+
+  .g--width-6\@movil {
+    width: 24px;
+  }
+
+  .g--width-7\@movil {
+    width: 32px;
+  }
+
+  .g--width-8\@movil {
+    width: 40px;
+  }
+
+  .g--width-9\@movil {
+    width: 60px;
+  }
+}
+@media (min-width: 768px) {
+  .g--width-0\@tablet {
+    width: 0px;
+  }
+
+  .g--width-1\@tablet {
+    width: 4px;
+  }
+
+  .g--width-2\@tablet {
+    width: 8px;
+  }
+
+  .g--width-3\@tablet {
+    width: 12px;
+  }
+
+  .g--width-4\@tablet {
+    width: 16px;
+  }
+
+  .g--width-5\@tablet {
+    width: 20px;
+  }
+
+  .g--width-6\@tablet {
+    width: 24px;
+  }
+
+  .g--width-7\@tablet {
+    width: 32px;
+  }
+
+  .g--width-8\@tablet {
+    width: 40px;
+  }
+
+  .g--width-9\@tablet {
+    width: 60px;
+  }
+}
+@media (min-width: 992px) {
+  .g--width-0\@desktop {
+    width: 0px;
+  }
+
+  .g--width-1\@desktop {
+    width: 4px;
+  }
+
+  .g--width-2\@desktop {
+    width: 8px;
+  }
+
+  .g--width-3\@desktop {
+    width: 12px;
+  }
+
+  .g--width-4\@desktop {
+    width: 16px;
+  }
+
+  .g--width-5\@desktop {
+    width: 20px;
+  }
+
+  .g--width-6\@desktop {
+    width: 24px;
+  }
+
+  .g--width-7\@desktop {
+    width: 32px;
+  }
+
+  .g--width-8\@desktop {
+    width: 40px;
+  }
+
+  .g--width-9\@desktop {
+    width: 60px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
