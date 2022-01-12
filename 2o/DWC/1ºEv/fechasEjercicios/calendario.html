@@ -1,83 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Calendario</title>
-  </head>
+</head>
 
-  <script>
-    let fecha = new Date();
+<script>
+    let fecha = new Date(); //Saca la fecha del dia actual
     let diasMes;
     let contenido = `<tr class="fila">`;
     let fields = 0;
-    var año = fecha.getFullYear();
-    var mes = fecha.getMonth() + 1;
+    var año = fecha.getFullYear(); //Saca el año actual
+    var mes = fecha.getMonth() + 1; //Saca el mes actual
 
-    let meses = [
-      "Enero",
-      "Febrero",
-      "Marzo",
-      "Abril",
-      "Mayo",
-      "Junio",
-      "Julio",
-      "Agosto",
-      "Septiembre",
-      "Occtubre",
-      "Noviembre",
-      "Diciembre",
+    let meses = [ //Declaro la variable meses para usarla mas tarde
+        "Enero",
+        "Febrero",
+        "Marzo",
+        "Abril",
+        "Mayo",
+        "Junio",
+        "Julio",
+        "Agosto",
+        "Septiembre",
+        "Occtubre",
+        "Noviembre",
+        "Diciembre",
     ];
-    var diasSemana = [
-      "Domingo",
-      "Lunes",
-      "Martes",
-      "Miércoles",
-      "Jueves",
-      "Viernes",
-      "Sábado",
+    var diasSemana = [ //Declaro la variable dias para usarla mas tarde
+        "Domingo",
+        "Lunes",
+        "Martes",
+        "Miércoles",
+        "Jueves",
+        "Viernes",
+        "Sábado",
     ];
+
     function calculoDiaComienzo() {
-      var dia = 1;
-      diasMes = new Date(año, mes, 0).getDate();
-      var indice = new Date(año, mes - 1, dia).getDay();
-      if (indice == 0) {
-        indice = 7;
-        return indice;
-      } else {
-        return indice;
-      }
+        //Esta funcion calcula en que dia de la semana empieza el mes
+        var dia = 1;
+        diasMes = new Date(año, mes, 0).getDate();
+        var indice = new Date(año, mes - 1, dia).getDay();
+        if (indice == 0) {
+            indice = 7;
+            return indice;
+        } else {
+            return indice;
+        }
     }
-    
+
     for (n = 1; n < calculoDiaComienzo(); n++) {
-      contenido += `<td class="columna">`;
-      fields++;
+        contenido += `<td class="columna">`;
+        fields++;
     }
+    //Aqui se calculan las semanas y se ordenan
     for (dia = 1; dia <= diasMes; dia++) {
-      if (fields % 7 == 0) {
-        if (fecha.getDate() == dia) {
-          contenido += `<tr class="fila"><td class="columna" id="diaHoy">${dia}</td>`;
+        if (fields % 7 == 0) { //Si el numero de celdas dividido entre da un resto de 7 hace un salto de linea
+            if (fecha.getDate() == dia) {
+                contenido += `<tr class="fila"><td class="columna" id="diaHoy">${dia}</td>`;
+            } else {
+                contenido += `<tr class="fila"><td class="columna">${dia}</td>`;
+            }
+            fields++;
         } else {
-          contenido += `<tr class="fila"><td class="columna">${dia}</td>`;
+            if (fecha.getDate() == dia) {
+                contenido += `<td class="columna" id="diaHoy">${dia}</td>`;
+            } else {
+                contenido += `<td class="columna">${dia}</td>`;
+            }
+            fields++;
         }
-        fields++;
-      } else {
-        if (fecha.getDate() == dia) {
-          contenido += `<td class="columna" id="diaHoy">${dia}</td>`;
-        } else {
-          contenido += `<td class="columna">${dia}</td>`;
-        }
-        fields++;
-      }
     }
     contenido += `</tr>`;
     let mesAnyo = `<h1>${meses[fecha.getMonth()]} ${fecha.getFullYear()}</h1> `;
     let tabla = `<table class="tabla"><tr class="fila"><td class="columna">L</td><td class="columna">M</td><td class="columna">X</td><td class="columna">J</td><td class="columna">V</td><td class="columna">S</td><td class="columna">D</td ></tr>${contenido}</table>`;
     mesAnyo += tabla;
     document.write(mesAnyo);
-  </script>
+</script>
 
-  <body></body>
+<body></body>
+
 </html>
