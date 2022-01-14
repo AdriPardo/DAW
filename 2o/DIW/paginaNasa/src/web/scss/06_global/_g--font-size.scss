@@ -1,0 +1,15 @@
+@each $key in getFontSizeKeys() {
+    .g--font-size-#{$key} {
+        font-size: getFontSize($key);
+    }
+}
+
+@each $breakpoint in getBreakpointsKeys() {
+    @media (min-width: getBreakpoint($breakpoint)) {
+        @each $key in getFontSizeKeys() {
+            .g--font-size-#{$key}\@#{$breakpoint} {
+                font-size: getFontSize($key);
+            }
+        }
+    }
+}
