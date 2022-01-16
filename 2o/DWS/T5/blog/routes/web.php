@@ -19,7 +19,7 @@ Route::get('/', function () {
 
 Route::get('/posts', function () {
     return view('posts.listado');
-})-> name ('posts_listado');
+})-> name ('posts_listado ');
 
 Route::get('/posts/{id}', function($id){
 return view('posts.ficha', compact('id'));;
