@@ -1,14 +1,12 @@
 <html>
 <head>
-    <link href="{{ mix('css/app.css') }}" rel="stylesheet" type="text/css" />
-    <title>
-        @yield('titulo')
-    </title>
+    <link rel="stylesheet" type="text/css" href="/css/app.css">
+<title>
+@yield('titulo')
+</title>
 </head>
-
 <body>
-    @include('partials.nav')
-    @yield('contenido')
+@include('partials.nav')
+@yield('contenido')
 </body>
-
 </html>

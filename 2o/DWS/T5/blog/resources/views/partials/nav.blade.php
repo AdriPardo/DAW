@@ -1,14 +1,12 @@
-
-<nav class="navbar navbar-dark bg-dark navbar-expand-lg">
-    <a class="navbar-brand" href="#">Blog</a>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-            <a class="nav-link" href="{{ route('inicio') }}">Inicio</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="{{ route('posts_listado') }}">Listado de libros</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+<nav>
+    <a href="{{ route('inicio') }}">Pagina de Inicio</a>
+    &nbsp;&nbsp;
+    <a href="{{ route('posts.index') }}">Listado</a>
+    &nbsp;&nbsp;
+    <a href="{{ route('posts.show', 1) }}">Ficha</a>
+    &nbsp;&nbsp;
+    <a href="{{ route('posts.create') }}">Creacion</a>
+    &nbsp;&nbsp;
+    <a href="{{ route('posts.edit', 1) }}">Edicion</a>
+    &nbsp;&nbsp;
+</nav>

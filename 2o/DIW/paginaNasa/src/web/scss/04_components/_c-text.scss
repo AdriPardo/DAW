@@ -1,8 +1,7 @@
 .c-text {
-    font-size: 20px;
-    margin-top: .5rem;
+    font-size: getFontSize("xl");
     color: getColorIndex("gray", 8);
-    &__alt {
+    &--alt {
         color: getColorIndex("yellow", 7);
     }
 }

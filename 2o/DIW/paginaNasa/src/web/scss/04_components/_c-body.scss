@@ -1,4 +1,4 @@
 .c-body {
-    background-color: getColorIndex("black", 1);
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: $background-color;
+    font-family: $font-family;
 }

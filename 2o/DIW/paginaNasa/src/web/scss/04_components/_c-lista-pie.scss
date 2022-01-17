@@ -1,0 +1,6 @@
+.c-lista-pie {
+    color: getColorIndex("white", 1);
+    &__item {
+        border-top: 1px solid getColorIndex("gray", 3);
+    }
+}

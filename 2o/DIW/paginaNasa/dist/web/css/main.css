@@ -492,13 +492,13 @@ table {
   display: inline-block;
   cursor: pointer;
   border-radius: 4px;
-  border: 1px solid #fdcb33;
+  border: 1px solid #9C9C9C;
   background-color: #000000;
-  color: white;
+  color: #FFEF75;
 }
-.c-button--secundario {
-  background-color: white;
-  color: #0056b8;
+.c-button:hover {
+  color: #FFFFFF;
+  border: 1px solid #fdcb33;
 }
 .c-button--terciario {
   background-color: #000000;
@@ -507,21 +507,34 @@ table {
   border: none;
 }
 .c-button--terciario:hover {
+  color: #fdcb33;
+  border: none;
   text-decoration: underline;
 }
 .c-button--alternativo {
-  background-color: #ed8936;
-  border-color: #ed8936;
-  color: white;
+  border-radius: 0px;
+  background-color: #000000;
+  color: #005C7A;
+  text-decoration: none;
+  border: none;
 }
-.c-button--peligroso {
-  background-color: #c53030;
-  border-color: #c53030;
-  color: white;
+.c-button--alternativo:hover {
+  text-decoration: none;
+  border: none;
+  color: #005C7A;
+  background-color: #9C9C9C;
 }
 
-.c-section {
-  margin: 2% 15%;
+.c-antetitulo {
+  background-color: #0074AD;
+  color: #F0F0F0;
+}
+
+.c-lista-pie {
+  color: #FFFFFF;
+}
+.c-lista-pie__item {
+  border-top: 1px solid #CFCFCF;
 }
 
 .c-body {
@@ -536,16 +549,15 @@ table {
 
 .c-text {
   font-size: 20px;
-  margin-top: 0.5rem;
   color: #525252;
 }
-.c-text__alt {
+.c-text--alt {
   color: #8F6600;
 }
 
 .c-subtitle {
   color: #FFFFFF;
-  font-size: 23px;
+  font-size: 22px;
 }
 
 .g--border-radius-0 {
