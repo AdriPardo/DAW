@@ -45,3 +45,8 @@
 @function getBreakpoint($key) {
     @return map-get($breakpoints, ""+$key);
 }
+
+@function getColorIndex($key, $index) {
+    $colors: map-get($colores, ""+$key);
+    @return nth($colors, $index);
+}

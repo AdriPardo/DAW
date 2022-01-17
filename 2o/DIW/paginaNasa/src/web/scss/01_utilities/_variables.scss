@@ -1,4 +1,5 @@
 $max-columns:12;
+$colores:( "yellow":(#FFFEE5, #FFFAAD, #FFEF75, #FFE138, #fdcb33, #fecb00, #8F6600, #523800, #1A1000), "blue":(#0080DB, #0078C2, #0074AD, #006894, #005C7A, #004C61, #00404D, #002C33, #00171A), "red":(#FCECE9, #F5C0B8, #EE8F87, #E65851, #DF2020, #AE1E19, #7D1B12, #47110A, #160603), "green":(#FFFFFF, #D4EDD7, #ACDCB0, #81CA85, #56B856, #41933E, #326C2D, #1F411B, #0B1609), "white":(#FFFFFF, #FCFCFC, #FCFCFC, #FAFAFA, #F7F7F7, #F5F5F5, #F5F5F5, #F2F2F2, #F0F0F0), "gray":(#FFFFFF, #E6E6E6, #CFCFCF, #B5B5B5, #9C9C9C, #828282, #6B6B6B, #525252, #383838), "black":(#000000));
 $border-radius: ( "0": 0px, "1": 2px, "2": 4px, "3": 6px, "4": 8px, "5": 16px, "6": 32px);
 $font-sizes: ( "3xs": 8px, "2xs": 10px, "xs": 12px, "s": 14px, "m": 16px, "l": 18px, "xl": 20px, "2xl": 22px, "3xl": 24px);
 $breakpoints:( "movil":576px, "tablet":768px, "desktop":992px);

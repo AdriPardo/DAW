@@ -492,8 +492,8 @@ table {
   display: inline-block;
   cursor: pointer;
   border-radius: 4px;
-  border: 1px solid #0056b8;
-  background-color: #0056b8;
+  border: 1px solid #fdcb33;
+  background-color: #000000;
   color: white;
 }
 .c-button--secundario {
@@ -501,9 +501,13 @@ table {
   color: #0056b8;
 }
 .c-button--terciario {
-  background-color: white;
-  color: #0056b8;
+  background-color: #000000;
+  color: #fdcb33;
+  text-decoration: none;
   border: none;
+}
+.c-button--terciario:hover {
+  text-decoration: underline;
 }
 .c-button--alternativo {
   background-color: #ed8936;
@@ -516,91 +520,32 @@ table {
   color: white;
 }
 
-.c-panel__titulo {
-  background-color: #0056b8;
-  color: #FFFFFF;
-  border-radius: 4px;
-}
-.c-panel__titulo--secundario {
-  background-color: #FFFFFF;
-  color: #0056b8;
-}
-.c-panel__texto {
-  background-color: #FFFFFF;
-  color: #0056b8;
-}
-
-.c-card {
-  height: 454px;
-  width: 313px;
-  margin-bottom: 2px;
-}
-.c-card__image {
-  max-width: 45%;
-  max-height: 33%;
-}
-.c-card__body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .c-section {
   margin: 2% 15%;
 }
 
-.c-tag {
-  height: 38px;
-  width: 17px;
-  font: #4089f2;
-  background-color: #dbeafe;
+.c-body {
+  background-color: #000000;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.c-title--destacado {
-  color: blue;
-}
-.c-title--degradado {
-  background: -webkit-linear-gradient(45deg, #57a1f0, #22d1ee 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.c-title--size-XS {
-  font-size: 1.125rem;
-  font-weight: 500;
-}
-.c-title--size-S {
-  font-size: 1.875rem;
-  font-weight: 600;
-}
-.c-title--size-M {
-  font-size: 2.5rem;
-  font-weight: 650;
-  text-align: center;
-}
-.c-title--size-L {
-  font-size: 3.75rem;
-  font-weight: 700;
-}
-.c-title--size-XL {
-  font-size: 5rem;
-  font-weight: 800;
+.c-title {
+  color: #fecb00;
+  font-size: 36px;
 }
 
-.c-parrafo {
+.c-text {
   font-size: 20px;
   margin-top: 0.5rem;
-  color: #87919c;
+  color: #525252;
 }
-.c-parrafo--cabecera {
-  text-align: center;
-  margin: 0% 23%;
+.c-text__alt {
+  color: #8F6600;
 }
 
 .c-subtitle {
-  --tw-text-opacity:1;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  color: rgba(37, 99, 235, var(--tw-text-opacity));
+  color: #FFFFFF;
+  font-size: 23px;
 }
 
 .g--border-radius-0 {
