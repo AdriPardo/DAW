@@ -28,7 +28,7 @@ class LoginController extends Controller
     public function logout()
     {
         Auth::logout();
-        $posts = Post::orderBy('titulo', 'ASC');
+        $posts = Post::orderBy('titulo', 'ASC')->paginate(5);
         return redirect()->route('posts.index', compact('posts'));
     }
 }
