@@ -10,6 +10,13 @@ use Illuminate\Support\Facades\DB;
 
 class PostController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware(
+            'auth',
+            ['only' => ['create', 'store', 'edit', 'update', 'destroy']]
+        );
+    }
     protected $fillable = ['titulo', 'contenido'];
     /**
      * Display a listing of the resource.
@@ -73,7 +80,7 @@ class PostController extends Controller
         $post = Post::findOrFail($id);
         $user = User::findOrFail($post->user_id);
         $users = DB::table('users')->where('id', '!=', $post->user_id)->get();
-        return view('posts.edit', compact('post','user', 'users'));
+        return view('posts.edit', compact('post', 'user', 'users'));
     }
 
     /**
