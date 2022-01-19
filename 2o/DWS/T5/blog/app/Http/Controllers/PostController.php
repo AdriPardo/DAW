@@ -6,6 +6,7 @@ use App\Http\Requests\PostRequest;
 use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Models\User;
+use Illuminate\Support\Facades\DB;
 
 class PostController extends Controller
 {
@@ -28,8 +29,8 @@ class PostController extends Controller
      */
     public function create()
     {
-        $user = User::get()->first();
-        return view('posts.create', compact('user'));
+        $users = User::get();
+        return view('posts.create', compact('users'));
     }
 
     /**
@@ -69,6 +70,10 @@ class PostController extends Controller
      */
     public function edit($id)
     {
+        $post = Post::findOrFail($id);
+        $user = User::findOrFail($post->user_id);
+        $users = DB::table('users')->where('id', '!=', $post->user_id)->get();
+        return view('posts.edit', compact('post','user', 'users'));
     }
 
     /**
@@ -80,7 +85,13 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $post = Post::findOrFail($id);
+        $user = User::findOrFail($request->get('user'));
+        $post->titulo = $request->get('titulo');
+        $post->contenido = $request->get('contenido');
+        $post->user()->associate($user);
+        $post->save();
+        return redirect()->route('posts.index');
     }
 
     /**
@@ -94,22 +105,6 @@ class PostController extends Controller
         Post::findOrFail($id)->delete();
         $posts = Post::orderBy('titulo', 'ASC')->paginate(5);
         return view('posts.index', compact('posts'));
-    }
-
-    public function nuevaPrueba()
-    {
-        $libro = new Post();
-        $libro->titulo = 'Titulo' . rand(1, 10);
-        $libro->contenido = 'Contenido' . rand(1, 10);
-        $libro->save();
-    }
-
-    public function editarPrueba($id)
-    {
-        $libro = Post::findOrFail($id);
-        $libro->titulo = 'Titulo' . rand(1, 10);
-        $libro->contenido = 'Contenido' . rand(1, 10);
-        $libro->save();
     }
 
     public static function __callStatic($name, $arguments)

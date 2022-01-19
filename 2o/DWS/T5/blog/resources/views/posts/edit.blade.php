@@ -1,9 +1,10 @@
 @extends('plantilla')
-@section('titulo', 'Nuevo Post')
+@section('titulo', 'Actualizar Post')
 @section('contenido')
-<h1>Nuevo Post</h1>
+<h1>Actualizar Post</h1>
 
-<form action="{{ route('posts.store') }}" method="POST">
+<form action="{{ route('posts.update', $post->id)}}" method="POST">
+@method('PUT')
 @csrf
 
 <div class="form-group">
@@ -19,7 +20,7 @@ id="titulo">
 
 @else
 <input type="text" class="form-control" name="titulo"
-id="titulo" value="{{old('titulo')}}">
+id="titulo" value="{{ $post->titulo }}">
 @endif
 </div>
 
@@ -36,13 +37,16 @@ id="contenido" size="75">
 
 @else
 <input type="text" class="form-control" name="contenido"
-id="contenido" size="75" value="{{old('contenido')}}">
+id="contenido" size="75" value="{{ $post->contenido }}">
 @endif
 </div>
 
 <div class="form-group">
 <label for="user">Usuario:</label>
 <select class="form-control" name="user" id="user">
+<option value="{{ $user->id }}">
+{{ $user->login }}
+</option>
 @foreach ($users as $user)
 <option value="{{ $user->id }}">
 {{ $user->login }}

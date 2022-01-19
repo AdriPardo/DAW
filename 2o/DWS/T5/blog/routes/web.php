@@ -19,7 +19,3 @@ Route::get('/', function () {
 })->name('inicio');
 
 Route::resource('posts', PostController::class);
-
-Route::get('libros/nuevaPrueba', [PostController::class, 'nuevaPrueba']);
-
-Route::get('libros/editarPrueba/{id}', [PostController::class, 'editarPrueba']);
