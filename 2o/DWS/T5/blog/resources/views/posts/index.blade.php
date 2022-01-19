@@ -1,23 +1,41 @@
 @extends('plantilla')
 @section('titulo', 'Listado de posts')
 @section('contenido')
-    <ul class="list-group list-group-flush">
-        @forelse ($posts as $post)
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Titulo</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
 
-            <li class="list-group-item"><span>Titulo: {{ $post->titulo }} ({{ $post->user->login }})</span>
-                <a href='{{ route('posts.show', $post->id) }}'><button class="btn btn-primary">Ver</button></a>
-                @if (auth()->check())
-                    <a href='{{ route('posts.edit', $post->id) }}'><button class="btn btn-warning">Editar</button></a>
-                    <form action="{{ route('posts.destroy', $post->id) }}" method="POST">
-                        @method('DELETE')
-                        @csrf
-                        <button class="btn btn-danger">Borrar</button>
-                    </form>
-                @endif
-            </li>
+            @forelse ($posts as $post)
+                <tr>
+                    <th scope="row">{{ $post->titulo }} ({{ $post->user->login }})</th>
+                    <td><a href='{{ route('posts.show', $post->id) }}'><button class="btn btn-primary">Ver</button></a></td>
+                        @if (auth()->check())
+                        <td>  <a href='{{ route('posts.edit', $post->id) }}'><button
+                                    class="btn btn-warning">Editar</button></a></td>
+                                    <td><form action="{{ route('posts.destroy', $post->id) }}" method="POST">
+                                @method('DELETE')
+                                @csrf
+                                <button class="btn btn-danger">Borrar</button></td>
+                            </form>
+                        @endif
+                    </tr>
+                @empty
 
-        @empty
+            @endforelse
+            </ul>
+        @endsection
 
-        @endforelse
-    </ul>
-@endsection
+
+
+
+
+
+    </tbody>
+</table>
