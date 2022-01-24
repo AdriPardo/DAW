@@ -1,0 +1,38 @@
+.c-button {
+    padding: getPadding("3");
+    display: inline-block;
+    cursor: pointer;
+    border-radius: getBorderRadius("2");
+    border: 1px solid getColor("gray", 7);
+    background-color: $background-color;
+    color: getColor("yellow", 5);
+
+    &:hover {
+        color: getColor("white", 5);
+        border: 1px solid getColor("yellow", 5);
+    }
+    &--terciario {
+        background-color: $background-color;
+        text-decoration: none;
+        border: none;
+        &:hover {
+            background-color: $background-color;
+            border: none;
+            color: getColor("yellow", 5);
+            text-decoration: underline;
+        }
+    }
+    &--alternativo {
+        background-color: $background-color;
+        color: getColor("blue", 3);
+
+        &:hover{ 
+            text-decoration: none;
+            color: getColor("blue", 3);
+            background-color: getColor("gray", 4);
+        }
+    }
+    &--large {
+        padding: getPadding("4") getPadding("2");
+    }
+}

@@ -1,0 +1,16 @@
+.l-item-detail {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    padding: 5%;
+    &__content {
+        width: 40%;
+    }
+    &__image {
+        width: 60%;
+        max-width: 650px;
+        height: auto;
+        min-height: 425px;
+        position: relative;
+    }
+}

@@ -1,0 +1,8 @@
+.c-text {
+    font-size: getFontSize("s");
+    margin-top: .5rem;
+    color: getColor("gray", 8);
+    &--alt {
+        color: getColor("yellow", 7);
+    }
+}

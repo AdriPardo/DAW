@@ -1,0 +1,7 @@
+.c-lista-pie {
+    background-color: $background-color;
+
+    &__header {
+        color: getColor("white", 9);
+    }
+}
