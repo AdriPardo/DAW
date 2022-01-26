@@ -25,7 +25,7 @@ class AuthJWTToken
             /* $decoded =  */JWT::decode($jwt, new Key($key, $alg));
 /*             return response()->json([$decoded->data]); */
         } catch (\Exception $e) {
-            return response()->json(['el token no es valido']);
+            return response()->json(['El token no es valido']);
         }
         return $next($request);
     }
