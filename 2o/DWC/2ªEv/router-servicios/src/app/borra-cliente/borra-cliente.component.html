@@ -1,0 +1,16 @@
+<br><br>
+<div align=center>
+  <h2>Borrado del cliente</h2>
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="./assets/{{cliente.foto}}" alt="Card image cap" size="50%">
+    <div class="card-body">
+      <h5 class="card-title">{{cliente.nombre}}{{cliente.id}}</h5>
+      <p class="card-text">{{cliente.cargo}}</p>
+      <br>
+      <button type="button" class="btn btn-danger" (click)="borrarCliente()">Borrar</button>
+      &nbsp;
+      <button type="button" class="btn btn-primary" routerLink="/clientes">Cancelar</button>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,33 @@
+<br><br>
+<div align=center>
+  <div style="width:400px">
+    <h3>Listado de Clientes</h3>           
+    
+    <table class="table table-bordered table-striped"
+    style="margin-top: 10px;">
+    <thead>
+    <tr class="filters">
+    <th>Id</th>    
+    <th>Nombre</th>
+    <th class="text-center">
+        <button type="button" class="btn btn-dark" routerLink="/nuevoCliente">Nuevo Cliente</button>
+    </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let cliente of clientes">
+    <td>{{ cliente.id }}</td>
+    <td>{{ cliente.nombre }}</td>
+    <td>
+        <button type="button" class="btn btn-primary" routerLink="/verCliente/{{cliente.id}}">Ver</button>
+        &nbsp;
+        <button type="button" class="btn btn-success" routerLink="/modificaCliente/{{cliente.id}}">Modificar</button>
+        &nbsp;
+        <button type="button" class="btn btn-danger" routerLink="/borraCliente/{{cliente.id}}">Borrar</button>
+    </td>
+    </tr>
+    </tbody>
+    </table>
+</div>
+</div>
+

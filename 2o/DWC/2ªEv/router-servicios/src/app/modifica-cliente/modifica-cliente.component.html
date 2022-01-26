@@ -1,0 +1,19 @@
+<br><br>
+<div align=center>
+  <div style="width: 18rem;">
+    <h2>Modifica Cliente</h2>
+    <div class="form-group" align=left>
+        <label>Id</label>
+        <input type="text" class="form-control" [(ngModel)]="miCliente.id" disabled=true>
+        <label>Nombre</label>
+        <input type="text" class="form-control" [(ngModel)]="miCliente.nombre">
+        <label>Cargo</label>
+        <input type="text" class="form-control" [(ngModel)]="miCliente.cargo">
+      </div>
+      <br>
+      <button type="button" class="btn btn-danger" routerLink="/clientes">Cancelar</button>
+      &nbsp;
+      <button type="button" class="btn btn-primary" (click)="grabaCliente()">Grabar</button>
+  </div>
+</div> 
+
