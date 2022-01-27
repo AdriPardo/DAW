@@ -11,10 +11,10 @@ class PlayerController extends Controller
 {
     public function __construct()
     {
-        $this->middleware(
+       /*  $this->middleware(
             'jwt',
             ['only' => ['store', 'update', 'destroy']]
-        );
+        ); */
     }
     /**
      * Display a listing of the resource.
@@ -43,6 +43,7 @@ class PlayerController extends Controller
         $player->weight = $request->Weight;
         $player->height = $request->Height;
         $player->position = $request->Position;
+        $player->nbadotcomplayerid = $request->NbaDotComPlayerId;
         $player->save();
         return response()->json($player, 201);
     }
@@ -68,14 +69,15 @@ class PlayerController extends Controller
     public function update(Request $request, Player $player)
     {
         $player->id = $request->Id;
-        $player->first_name = $request->first_name;
-        $player->last_name = $request->last_name;
+        $player->first_name = $request->First_name;
+        $player->last_name = $request->Last_name;
         $player->team_id = $request->Team_id;
         $player->weight = $request->Weight;
         $player->height = $request->Height;
         $player->position = $request->Position;
+        $player->NbaDotComPlayerId = $request->NbaDotComPlayerId;
         $player->save();
-        return response()->json($player, 200);
+        return response()->json($player, 201);
     }
 
     /**

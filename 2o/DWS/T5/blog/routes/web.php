@@ -1,7 +1,5 @@
 <?php
 
-use App\Http\Controllers\LoginController;
-use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,12 +14,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-})->name('inicio');
+    return view('inicio');
+})-> name ('inicio');
 
-Route::resource('posts', PostController::class);
+Route::get('/posts', function () {
+    return view('posts.listado');
+})-> name ('posts_listado ');
 
-Route::get('login', [LoginController::class, 'loginForm'])->name('login');
-Route::post('login', [LoginController::class, 'login']);
-
-Route::get('logout', [LoginController::class, 'logout'])->name('logout');
+Route::get('/posts/{id}', function($id){
+return view('posts.ficha', compact('id'));;
+})-> where ('id', "[0-9]+")
+-> name ('posts_ficha');

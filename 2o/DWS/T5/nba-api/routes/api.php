@@ -2,7 +2,6 @@
 
 use App\Http\Controllers\api\PlayerController;
 use App\Http\Controllers\LoginController;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
