@@ -11,10 +11,10 @@ class PlayerController extends Controller
 {
     public function __construct()
     {
-       /*  $this->middleware(
+        $this->middleware(
             'jwt',
             ['only' => ['store', 'update', 'destroy']]
-        ); */
+        );
     }
     /**
      * Display a listing of the resource.

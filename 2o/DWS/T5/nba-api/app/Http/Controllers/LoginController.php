@@ -24,7 +24,7 @@ class LoginController extends Controller
             return response()->json(['token' => $token], 200);
 /*             $usuario->api_token = Str::random(60);
             $usuario->save();
-            return response()->json($usuario->api_token); */
+            return response()->json($usuario->api_token, 200); */
         }
     }
 
