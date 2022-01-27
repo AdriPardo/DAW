@@ -1,6 +1,7 @@
 <?php
 
-use App\Http\Controllers\Api\JugadorController;
+use App\Http\Controllers\api\PlayerController;
+use App\Http\Controllers\LoginController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -15,8 +16,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::apiResource('player', PlayerController::class);
 
-Route::apiResource('jugador', JugadorController::class);
+Route::post('login', [LoginController::class, 'login'])->name('login');
+Route::post('logout', [LoginController::class, 'logout'])->name('logout');
+Route::post('refreshToken', [LoginController::class, 'refreshToken'])->name('refreshToken');

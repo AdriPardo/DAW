@@ -5,10 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Equipo extends Model
+class Player extends Model
 {
     use HasFactory;
-
-    protected $primaryKey = 'Nombre';
-    protected $keyType = 'string';
+    public function team()
+    {
+        return $this->belongsTo('\App\Models\Team');
+    }
 }
