@@ -21,7 +21,7 @@ class LoginController extends Controller
             return response()->json(['error' => 'Credenciales no válidas'], 401);
         } else {
             $token = $this->getJWT($usuario);
-            return response()->json(['token' => $token]);
+            return response()->json(['token' => $token], 200);
 /*             $usuario->api_token = Str::random(60);
             $usuario->save();
             return response()->json($usuario->api_token); */
@@ -40,7 +40,7 @@ class LoginController extends Controller
 
             $usuario->api_token = '';
             $usuario->save();
-            return response()->json('Se ha cerrado sesion con exito');
+            return response()->json('Se ha cerrado sesion con exito', 200);
         }
     }
 
@@ -51,11 +51,11 @@ class LoginController extends Controller
         $usuario = $token ?  Usuario::where('api_token', $token)->first() : false;
 
         if (!$token || !$usuario) {
-            return response()->json('Refresh token invalido');
+            return response()->json('Refresh token invalido', 401);
         } else {
             $usuario->api_token = Str::random(60);
             $usuario->save();
-            return response()->json($usuario->api_token);
+            return response()->json($usuario->api_token, 200);
         }
     }
     private function getJWT($usuario)
