@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\equiposResource;
+use App\Http\Resources\TeamResource;
 use App\Models\Team;
 use Illuminate\Http\Request;
 
@@ -15,7 +17,8 @@ class TeamController extends Controller
      */
     public function index()
     {
-        //
+        $teams = Team::all();
+        return response(TeamResource::collection($teams), 200);
     }
 
     /**
@@ -35,9 +38,9 @@ class TeamController extends Controller
      * @param  \App\Models\Team  $team
      * @return \Illuminate\Http\Response
      */
-    public function show(Team $team)
+    public function show(Team $equipo)
     {
-        //
+        return response()->json($equipo, 200);
     }
 
     /**

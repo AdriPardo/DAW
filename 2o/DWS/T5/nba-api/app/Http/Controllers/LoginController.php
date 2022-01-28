@@ -20,11 +20,9 @@ class LoginController extends Controller
         if (!$usuario || !Hash::check($credenciales['password'], $usuario->password)) {
             return response()->json(['error' => 'Credenciales no válidas'], 401);
         } else {
-            $token = $this->getJWT($usuario);
-            return response()->json(['token' => $token], 200);
-/*             $usuario->api_token = Str::random(60);
+            $usuario->api_token = Str::random(60);
             $usuario->save();
-            return response()->json($usuario->api_token, 200); */
+            return response()->json($usuario->api_token, 200);
         }
     }
 
@@ -44,35 +42,4 @@ class LoginController extends Controller
         }
     }
 
-    public function refreshToken(Request $request)
-    {
-        $tokenCabecera = $request->header('Authorization');
-        $token = isset($tokenCabecera) ? ltrim(ltrim($tokenCabecera, 'Bearer')) : false;
-        $usuario = $token ?  User::where('api_token', $token)->first() : false;
-
-        if (!$token || !$usuario) {
-            return response()->json('Refresh token invalido', 401);
-        } else {
-            $usuario->api_token = Str::random(60);
-            $usuario->save();
-            return response()->json($usuario->api_token, 200);
-        }
-    }
-    private function getJWT($usuario)
-    {
-        $time = time();
-        $payload = [
-            'iat' => $time,
-            'nbf' => $time,
-            'exp' => $time + 7200,
-            'data' => [
-                'id' => $usuario->id,
-                'usuario' => $usuario->usuario
-            ]
-        ];
-        $key = env('JWT_KEY');
-        $alg = 'HS256';
-        $token = JWT::encode($payload, $key, $alg);
-        return $token;
-    }
 }

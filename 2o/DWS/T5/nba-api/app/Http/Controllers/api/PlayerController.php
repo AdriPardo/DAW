@@ -9,13 +9,6 @@ use Illuminate\Http\Request;
 
 class PlayerController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware(
-            'jwt',
-            ['only' => ['store', 'update', 'destroy']]
-        );
-    }
     /**
      * Display a listing of the resource.
      *
@@ -23,8 +16,8 @@ class PlayerController extends Controller
      */
     public function index()
     {
-        $players = Player::get();
-        return response()->json($players, 200);
+        $data = Player::paginate(request()->all());
+        return response()->json($data, 200);
     }
 
     /**
@@ -36,7 +29,6 @@ class PlayerController extends Controller
     public function store(Request $request)
     {
         $player = new Player();
-        $player->id = $request->Id;
         $player->first_name = $request->First_name;
         $player->last_name = $request->Last_name;
         $player->team_id = $request->Team_id;
@@ -54,9 +46,9 @@ class PlayerController extends Controller
      * @param  \App\Models\Player  $player
      * @return \Illuminate\Http\Response
      */
-    public function show(Player $player)
+    public function show(Player $jugadore)
     {
-        return response()->json($player, 200);
+        return response()->json($jugadore, 200);
     }
 
     /**
@@ -66,18 +58,17 @@ class PlayerController extends Controller
      * @param  \App\Models\Jugador  $player
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Player $player)
+    public function update(Request $request, Player $jugadore)
     {
-        $player->id = $request->Id;
-        $player->first_name = $request->First_name;
-        $player->last_name = $request->Last_name;
-        $player->team_id = $request->Team_id;
-        $player->weight = $request->Weight;
-        $player->height = $request->Height;
-        $player->position = $request->Position;
-        $player->NbaDotComPlayerId = $request->NbaDotComPlayerId;
-        $player->save();
-        return response()->json($player, 201);
+        $jugadore->first_name = $request->First_name;
+        $jugadore->last_name = $request->Last_name;
+        $jugadore->team_id = $request->Team_id;
+        $jugadore->weight = $request->Weight;
+        $jugadore->height = $request->Height;
+        $jugadore->position = $request->Position;
+        $jugadore->NbaDotComPlayerId = $request->NbaDotComPlayerId;
+        $jugadore->save();
+        return response()->json($jugadore, 201);
     }
 
     /**
@@ -86,9 +77,9 @@ class PlayerController extends Controller
      * @param  \App\Models\Player  $player
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Player $player)
+    public function destroy(Player $jugadore)
     {
-        $player->delete();
-        return response()->json($player);
+        $jugadore->delete();
+        return response()->json($jugadore);
     }
 }
