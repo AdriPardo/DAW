@@ -16,7 +16,7 @@ class PlayerController extends Controller
      */
     public function index()
     {
-        $data = Player::paginate(request()->all());
+        $data = Player::paginate(10);
         return response()->json($data, 200);
     }
 
