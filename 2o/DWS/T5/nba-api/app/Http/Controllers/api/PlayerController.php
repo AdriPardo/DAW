@@ -45,7 +45,7 @@ class PlayerController extends Controller
         $player->position = $request->Position;
         $player->nbadotcomplayerid = $request->NbaDotComPlayerId;
         $player->save();
-        return response()->json($player, 201);
+        return response()->json($player, 201) ;
     }
 
     /**
