@@ -1,0 +1,78 @@
+
+<!--------------------------------------Interpolación de variable del controlador--------------------------------------------------->
+
+<h3 align="center">{{titulo}}</h3><br>
+
+<!-----------------------------------------Interpolación de objeto del controlador-------------------------------------------------->
+<!--
+<h2>{{trabajadores[2].nombre}}</h2>
+<h2>{{trabajadores[2].cargo}}</h2>
+<h2>{{trabajadores[2].descripcion}}</h2>
+<img src="./assets/{{trabajadores[2].foto}}">
+-->
+
+<!-------------------------------------------Directiva *ngFor para mostrar todos----------------------------------------------------->
+<!--
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Nombre</th>
+      <th scope="col">Cargo</th>
+      <th scope="col">Descripción</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let trabajador of trabajadores">
+      <td>{{trabajador.nombre}}</td>
+      <td>{{trabajador.cargo}}</td>
+      <td>{{trabajador.descripcion}}</td>
+    </tr>
+  </tbody>
+</table>
+-->
+
+<!------------------------------------------------------Diseño elaborado------------------------------------------------------------>
+<!--
+<div class="col mb-4">
+   
+    <div class="card h-100">
+      
+      <div class="view overlay">
+        <img class="card-img-top" src="./assets/{{trabajadores[2].foto}}" alt="Card image cap">
+        <a href="#!">
+          <div class="mask rgba-white-slight"></div>
+        </a>
+      </div>
+
+      
+      <div class="card-body">
+
+        
+        <h4 class="card-title">{{trabajadores[2].nombre}} ({{trabajadores[2].cargo}})</h4>
+        
+        <p class="card-text">{{trabajadores[2].descripcion}}</p>
+        
+      </div>
+      <div class="text-center">
+        <button type="button" class="btn btn-primary">Ver más</button>
+      </div>
+
+    </div>
+    
+  </div>
+-->
+  
+<!-----------------------------------------------Reutilización de componentes------------------------------------------------------->
+<!--
+<h3 align="center">{{titulo}}</h3><br>
+  <div class="row row-cols-1 row-cols-md-4">
+    <app-card-trabajador *ngFor="let trabajador of trabajadores"
+    [trabajador]="trabajador"
+    (eventoBorrar)="borrarTrabajador($event)">
+
+    </app-card-trabajador>
+  </div>  
+
+--> 
+
+<router-outlet></router-outlet>

@@ -1,0 +1,9 @@
+<br>
+<h3> Fin de la Tarea {{miTarea.id}}</h3>                        <!-- Poner id de la tarea -->
+<div class="alert alert-dark" role="alert">
+    <br>             {{miTarea.nombre}}                             <!-- Poner nombre de la tarea -->
+     <div class="text-center">
+        <button class="btn btn-danger" (click)="finalizar()">Finalizar</button> &nbsp;
+        <button class="btn btn-primary" (click)="cancelar()">Cancelar</button>
+    </div>
+</div>

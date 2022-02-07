@@ -1,0 +1,13 @@
+<br>
+<h3>Listado de Tareas</h3>
+ <div class="row row-cols-1 row-cols-md-4">
+  <app-tarea *ngFor="let tarea of tareas"
+    [tarea]="tarea"
+    (eventoBorrar)="borrarTarea($event)">
+  </app-tarea>
+
+</div>
+<br>
+<div class="text-center">
+<button class="btn btn-primary text-center" (click)="volver()">Volver a Tareas</button> <!--Boton para volver a tareas -->
+</div>
