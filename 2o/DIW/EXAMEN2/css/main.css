@@ -405,21 +405,19 @@ html {
 }
 
 .c-cuadrado {
-  border: solid black;
+  border: 1px solid #000000;
   width: 40px;
   height: 40px;
-  transition-timing-function: ease-in-out;
-  transition: width 3s, height 3s;
+  transition: transform 3s ease-in-out;
+}
+.c-cuadrado:hover {
+  transform: scale(1.25, 1.25);
 }
 @media (min-width: 750px) {
   .c-cuadrado {
     width: max(40px, 10vw);
     height: max(40px, 10vw);
   }
-}
-.c-cuadrado:hover {
-  width: 125%;
-  height: 125%;
 }
 
 .c-ejercicio2 {
@@ -449,13 +447,11 @@ html {
   background-color: #FFE138;
 }
 .c-noticia__cuerpo {
-  align-items: center;
   width: 600px;
   padding: 8px;
   color: #E6E6E6;
   height: 40px;
   background-color: #9C9C9C;
-  border-radius: getBorderRadius("1");
   font-size: 16px;
 }
 .c-noticia__cuerpo--exito {
@@ -526,11 +522,15 @@ html {
   }
 }
 .c-noticia--lg {
-  padding: 40px;
+  height: 120px;
+  padding-left: 32px;
+  padding-top: 50px;
   font-size: 20px;
 }
 .c-noticia--sm {
-  padding: 4px;
+  padding-left: 16px;
+  padding-top: 4px;
+  height: 20px;
   font-size: 12px;
 }
 
