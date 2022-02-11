@@ -415,8 +415,8 @@ html {
 }
 @media (min-width: 750px) {
   .c-cuadrado {
-    width: max(40px, 10vw);
-    height: max(40px, 10vw);
+    width: max(40px, 5vw);
+    height: max(40px, 5vw);
   }
 }
 
