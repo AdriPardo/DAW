@@ -1,3 +1,80 @@
-.c-noticia{
+.c-noticia {
+    display: flex;
+    flex-direction: row;
+
+    &__borde {
+        background-color: getColor("gray", 9);
+        width: getWidth("2");
+
+        &--exito {
+            background-color: getColor("green", 4);
+        }
+
+        &--peligro {
+            background-color: getColor("red", 4);
+        }
+
+        &--informacion {
+            background-color: getColor("blue", 4);
+        }
+
+        &--aviso {
+            background-color: getColor("yellow", 4);
+        }
+    }
+
+    &__cuerpo {
+        align-items: center;
+        width: calc(getWidth("9") * 10);
+        padding: getPadding("2");
+        color: getColor("gray", 2);
+        height: calc(getHeight("5") * 2);
+        background-color: getColor("gray", 5);
+        border-radius: getBorderRadius("1");
+        font-size: getFontSize("m");
+
+        &--exito {
+            color: getColor("green", 4);
+        }
+
+        &--peligro {
+            color: getColor("red", 4);
+        }
+
+        &--informacion {
+            color: getColor("blue", 4);
+        }
+
+        &--aviso {
+            color: getColor("yellow", 5);
+        }
+    }
+
+    &--animar {
+        animation-name: animacion-desplazar;
+        animation-duration: 1.5s;
+        animation-iteration-count: 2;
+        animation-direction: alternate;
+    }
+
+    @keyframes animacion-desplazar {
+        0% {
+            transform: translateX(0px);
+            overflow: hidden;
+        }
+
+        100% {
+            transform: translateX(2400px);
+            display: none;
+        }
+    }
     
+    &--lg {
+        padding: calc(getPadding("2") * 5);
+        font-size: getFontSize("xl");
+    }
+    &--sm {
+        padding: getPadding("1");
+        font-size: getFontSize("xs");
+    } 
 }

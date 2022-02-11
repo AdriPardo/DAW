@@ -428,6 +428,73 @@ html {
   height: 100px;
 }
 
+.c-noticia {
+  display: flex;
+  flex-direction: row;
+}
+.c-noticia__borde {
+  background-color: #383838;
+  width: 8px;
+}
+.c-noticia__borde--exito {
+  background-color: #81CA85;
+}
+.c-noticia__borde--peligro {
+  background-color: #E65851;
+}
+.c-noticia__borde--informacion {
+  background-color: #006894;
+}
+.c-noticia__borde--aviso {
+  background-color: #FFE138;
+}
+.c-noticia__cuerpo {
+  align-items: center;
+  width: 600px;
+  padding: 8px;
+  color: #E6E6E6;
+  height: 40px;
+  background-color: #9C9C9C;
+  border-radius: getBorderRadius("1");
+  font-size: 16px;
+}
+.c-noticia__cuerpo--exito {
+  color: #81CA85;
+}
+.c-noticia__cuerpo--peligro {
+  color: #E65851;
+}
+.c-noticia__cuerpo--informacion {
+  color: #006894;
+}
+.c-noticia__cuerpo--aviso {
+  color: #fdcb33;
+}
+.c-noticia--animar {
+  animation-name: animacion-desplazar;
+  animation-duration: 1.5s;
+  animation-iteration-count: 2;
+  animation-direction: alternate;
+}
+@keyframes animacion-desplazar {
+  0% {
+    transform: translateX(0px);
+    overflow: hidden;
+  }
+  100% {
+    transform: translateX(2400px);
+    display: none;
+  }
+}
+.c-noticia--lg {
+  padding: 40px;
+  font-size: 20px;
+}
+.c-noticia--sm {
+  padding: 4px;
+  font-size: 12px;
+}
+
 .g--border-width-1 {
   border-width: 1px;
 }

@@ -46,3 +46,8 @@
 @function getHeight($key) {
   @return map-get($heights, ""+$key);
 }
+
+@function getColor($key, $index) {
+  $colors: map-get($colores, "" + $key);
+  @return nth($colors, $index);
+}
