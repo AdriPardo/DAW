@@ -1,0 +1,32 @@
+@function getPaddingKeys() {
+  @return map-keys($paddings);
+}
+
+@function getPadding($key) {
+  @return map-get($paddings,""+$key);
+}
+
+
+@function getFontSizeKeys() {
+  @return map-keys($font-sizes);
+}
+
+@function getFontSize($key) {
+  @return map-get($font-sizes,""+$key);
+}
+
+@function getBorderWidthsKeys() {
+  @return map-keys($border-widths);
+}
+
+@function getBorderWidth($key) {
+  @return map-get($border-widths, ""+$key);
+}
+
+@function getBreakpointsKeys() {
+  @return map-keys($breakpoints);
+}
+
+@function getBreakpoint($key) {
+  @return map-get($breakpoints, ""+$key);
+}

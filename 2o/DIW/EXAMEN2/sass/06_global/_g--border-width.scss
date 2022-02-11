@@ -1,0 +1,15 @@
+@each $key in getBorderWidthsKeys() {
+    .g--border-width-#{$key} {
+        border-width: getBorderWidth($key);
+    }
+}
+
+@each $breakpoint in getBreakpointsKeys() {
+    @media (min-width: getBreakpoint($breakpoint)) {
+        @each $key in getBorderWidthsKeys() {
+            .g--border-width-#{$key}\@#{$breakpoint} {
+                border-width: getBorderWidth($key);
+            }
+        }
+    }
+}
