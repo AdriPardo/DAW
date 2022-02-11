@@ -30,3 +30,11 @@
 @function getBreakpoint($key) {
   @return map-get($breakpoints, ""+$key);
 }
+
+@function getWidthsKeys() {
+  @return map-keys($widths);
+}
+
+@function getWidth($key) {
+  @return map-get($widths, ""+$key);
+}

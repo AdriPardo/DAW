@@ -404,6 +404,12 @@ html {
   display: grid;
 }
 
+.c-cuadrado {
+  width: 100px;
+  height: 100px;
+  border: solid black;
+}
+
 .g--border-width-1 {
   border-width: 1px;
 }
@@ -556,7 +562,7 @@ html {
   padding-bottom: 0px;
 }
 
-.g--padding-right0 {
+.g--padding-right-0 {
   padding-right: 0px;
 }
 
@@ -586,7 +592,7 @@ html {
   padding-bottom: 4px;
 }
 
-.g--padding-right1 {
+.g--padding-right-1 {
   padding-right: 4px;
 }
 
@@ -616,7 +622,7 @@ html {
   padding-bottom: 8px;
 }
 
-.g--padding-right2 {
+.g--padding-right-2 {
   padding-right: 8px;
 }
 
@@ -646,7 +652,7 @@ html {
   padding-bottom: 12px;
 }
 
-.g--padding-right3 {
+.g--padding-right-3 {
   padding-right: 12px;
 }
 
@@ -676,7 +682,7 @@ html {
   padding-bottom: 16px;
 }
 
-.g--padding-right4 {
+.g--padding-right-4 {
   padding-right: 16px;
 }
 
@@ -706,7 +712,7 @@ html {
   padding-bottom: 20px;
 }
 
-.g--padding-right5 {
+.g--padding-right-5 {
   padding-right: 20px;
 }
 
@@ -736,7 +742,7 @@ html {
   padding-bottom: 24px;
 }
 
-.g--padding-right6 {
+.g--padding-right-6 {
   padding-right: 24px;
 }
 
@@ -766,7 +772,7 @@ html {
   padding-bottom: 32px;
 }
 
-.g--padding-right7 {
+.g--padding-right-7 {
   padding-right: 32px;
 }
 
@@ -796,7 +802,7 @@ html {
   padding-bottom: 40px;
 }
 
-.g--padding-right8 {
+.g--padding-right-8 {
   padding-right: 40px;
 }
 
@@ -826,7 +832,7 @@ html {
   padding-bottom: "auto";
 }
 
-.g--padding-rightauto {
+.g--padding-right-auto {
   padding-right: "auto";
 }
 
