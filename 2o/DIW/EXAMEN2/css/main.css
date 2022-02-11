@@ -473,12 +473,51 @@ html {
 .c-noticia--animar {
   animation-name: animacion-desplazar;
   animation-duration: 1.5s;
-  animation-iteration-count: 2;
-  animation-direction: alternate;
+  animation-fill-mode: forwards;
 }
 @keyframes animacion-desplazar {
   0% {
     transform: translateX(0px);
+    overflow: hidden;
+  }
+  3% {
+    transform: translateX(15px);
+    overflow: hidden;
+  }
+  6% {
+    transform: translateX(30px);
+    overflow: hidden;
+  }
+  9% {
+    transform: translateX(45px);
+    overflow: hidden;
+  }
+  11% {
+    transform: translateX(60px);
+    overflow: hidden;
+  }
+  14% {
+    transform: translateX(75px);
+    overflow: hidden;
+  }
+  17% {
+    transform: translateX(90px);
+    overflow: hidden;
+  }
+  20% {
+    transform: translateX(105px);
+    overflow: hidden;
+  }
+  23% {
+    transform: translateX(120px);
+    overflow: hidden;
+  }
+  26% {
+    transform: translateX(135px);
+    overflow: hidden;
+  }
+  29% {
+    transform: translateX(150px);
     overflow: hidden;
   }
   100% {

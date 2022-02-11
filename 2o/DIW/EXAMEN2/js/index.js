@@ -3,8 +3,10 @@ function animar(id) {
     cuadradoElement.classList.remove("c-noticia--animar");
     setTimeout(function() {
         cuadradoElement.classList.add("c-noticia--animar");
-        
-    },10);
+        setTimeout(() => {
+            cuadradoElement.remove();
+        }, 1050);
+    },0);
     
     
 }
