@@ -406,8 +406,24 @@ html {
 
 .c-cuadrado {
   border: solid black;
+  width: 40px;
+  height: 40px;
+  transition-timing-function: ease-in-out;
+  transition: width 3s, height 3s;
 }
-.c-cuadrado--ejercicio2 {
+@media (min-width: 750px) {
+  .c-cuadrado {
+    width: max(40px, 10vw);
+    height: max(40px, 10vw);
+  }
+}
+.c-cuadrado:hover {
+  width: 60px;
+  height: 60px;
+}
+
+.c-ejercicio2 {
+  border: solid black;
   width: 100px;
   height: 100px;
 }
