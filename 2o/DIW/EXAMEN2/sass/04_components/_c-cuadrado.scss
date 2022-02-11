@@ -2,18 +2,16 @@
     border: solid black;
     width: getWidth("8");
     height: getHeight("8");
-   
     transition-timing-function: ease-in-out;
     transition: width 3s, height 3s;
-    
-    @media (min-width:750px){
-        width: max(getWidth("8"), 10vw);
-        height: max(getHeight("8"), 10vw);  
 
+    @media (min-width: 750px) {
+        width: max(getWidth("8"), 10vw);
+        height: max(getHeight("8"), 10vw);
     }
-    
+
     &:hover {
-        width: getWidth("9");
-        height: getHeight("9");
+        width: calc(100% + 25%);
+        height: calc(100% + 25%);
     }
 }

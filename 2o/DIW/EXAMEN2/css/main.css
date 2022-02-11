@@ -418,8 +418,8 @@ html {
   }
 }
 .c-cuadrado:hover {
-  width: 60px;
-  height: 60px;
+  width: 125%;
+  height: 125%;
 }
 
 .c-ejercicio2 {
