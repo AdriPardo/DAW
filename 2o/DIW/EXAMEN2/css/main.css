@@ -405,9 +405,11 @@ html {
 }
 
 .c-cuadrado {
+  border: solid black;
+}
+.c-cuadrado--ejercicio2 {
   width: 100px;
   height: 100px;
-  border: solid black;
 }
 
 .g--border-width-1 {

@@ -17,6 +17,12 @@ $widths: (
     "8": 40px,
     "9": 60px,
 );
+$heights: map-merge(
+    $widths,
+    (
+        "auto": "auto",
+    )
+);
 
 $breakpoints: (
     "sm": 500px,

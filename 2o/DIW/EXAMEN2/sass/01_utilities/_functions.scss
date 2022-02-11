@@ -38,3 +38,11 @@
 @function getWidth($key) {
   @return map-get($widths, ""+$key);
 }
+
+@function getHeightsKeys() {
+  @return map-keys($heights);
+}
+
+@function getHeight($key) {
+  @return map-get($heights, ""+$key);
+}
