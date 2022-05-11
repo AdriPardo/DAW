@@ -1,0 +1,10 @@
+Recetas
+Bajarse lo último de las 3 ramas.
+1
+git fetch --prune && git checkout develop && git merge --ff-only origin/develop && git checkout release && git merge --ff-only origin/release && git checkout master && git merge --ff-only origin/master && git checkout develop
+Hacer un merge de las 3 ramas
+1
+git checkout release && git merge --ff-only develop && git checkout master && git merge --ff-only release && git checkout develop
+Subir las 3 ramas
+1
+git checkout master && git push && git checkout release && git push && git checkout develop && git push
